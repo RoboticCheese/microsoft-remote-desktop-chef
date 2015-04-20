@@ -19,6 +19,8 @@
 #
 
 if defined?(ChefSpec)
+  ChefSpec.define_matcher(:microsoft_remote_desktop_app)
+
   def install_microsoft_remote_desktop_app(name)
     ChefSpec::Matchers::ResourceMatcher.new(:microsoft_remote_desktop_app,
                                             :install,
