@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 #
 # Cookbook Name:: microsoft-remote-desktop
-# Recipe:: default
+# Library:: resource_microsoft_remote_desktop_app
 #
 # Copyright 2015 Jonathan Hartman
 #
@@ -18,8 +18,23 @@
 # limitations under the License.
 #
 
-include_recipe 'mac-app-store'
+class Chef
+  class Resource
+    # A Chef resource for the Microsoft Remote Desktop app.
+    #
+    # @author Jonathan Hartman <j@p4nt5.com>
+    class MicrosoftRemoteDesktopApp < MacAppStoreApp
+      self.resource_name = :microsoft_remote_desktop_app
 
-microsoft_remote_desktop_app 'default' do
-  action :install
+      #
+      # Overload the app name with the one for this app.
+      #
+      attribute :app_name, kind_of: String, default: 'Microsoft Remote Desktop'
+
+      #
+      # Overload the bundle ID with the one for this app
+      #
+      attribute :bundle_id, kind_of: String, default: 'com.microsoft.rdc.mac'
+    end
+  end
 end

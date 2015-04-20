@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 #
 # Cookbook Name:: microsoft-remote-desktop
-# Spec:: default
+# Library:: matchers
 #
 # Copyright 2015 Jonathan Hartman
 #
@@ -18,13 +18,10 @@
 # limitations under the License.
 #
 
-require 'spec_helper'
-
-describe 'microsoft-remote-desktop::default' do
-  # Serverspec examples can be found at
-  # http://serverspec.org/resource_types.html
-  
-  it 'does something' do
-    skip 'Replace this with meaningful tests'
+if defined?(ChefSpec)
+  def install_microsoft_remote_desktop_app(name)
+    ChefSpec::Matchers::ResourceMatcher.new(:microsoft_remote_desktop_app,
+                                            :install,
+                                            name)
   end
 end

@@ -1,31 +1,21 @@
 # Encoding: UTF-8
-#
-# Cookbook Name:: microsoft-remote-desktop
-# Spec:: default
-#
-# Copyright 2015 Jonathan Hartman
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
 
 require 'spec_helper'
 
 describe 'microsoft-remote-desktop::default' do
-  let(:platform) { { platform: 'ubuntu', version: '14.04' } }
-  let(:runner) { ChefSpec::ServerRunner.new(platform) }
+  let(:platform) { nil }
+  let(:runner) { ChefSpec::SoloRunner.new(platform) }
   let(:chef_run) { runner.converge(described_recipe) }
 
-  it 'converges successfully' do
-    expect(chef_run).to be
+  context 'Mac OS X platform' do
+    let(:platform) { { platform: 'mac_os_x', version: '10.10' } }
+
+    it 'runs the mac-app-store default recipe' do
+      expect(chef_run).to include_recipe('mac-app-store')
+    end
+
+    it 'installs the Microsoft Remote Desktop app' do
+      expect(chef_run).to install_microsoft_remote_desktop_app('default')
+    end
   end
 end
