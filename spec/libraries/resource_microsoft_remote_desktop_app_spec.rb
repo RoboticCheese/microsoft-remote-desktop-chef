@@ -9,8 +9,7 @@ describe Chef::Resource::MicrosoftRemoteDesktopApp do
 
   describe '#initialize' do
     it 'sets the correct resource name' do
-      exp = :microsoft_remote_desktop_app
-      expect(resource.instance_variable_get(:@resource_name)).to eq(exp)
+      expect(resource.resource_name).to eq(:microsoft_remote_desktop_app)
     end
   end
 

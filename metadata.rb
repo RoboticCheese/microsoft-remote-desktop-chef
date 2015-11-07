@@ -9,7 +9,7 @@ description      'Installs/Configures the Microsoft Remote Desktop app'
 long_description 'Installs/Configures the Microsoft Remote Desktop app'
 version          '0.1.1'
 
-depends          'mac-app-store', '~> 0.1'
+depends          'mac-app-store', '~> 1.0'
 
 supports         'mac_os_x'
 # rubocop:enable SingleSpaceBeforeFirstArg

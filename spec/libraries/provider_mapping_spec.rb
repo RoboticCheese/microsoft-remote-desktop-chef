@@ -6,6 +6,7 @@ require_relative '../../libraries/provider_mapping'
 describe :provider_mapping do
   let(:platform) { nil }
   let(:app_provider) do
+    return nil unless Chef::Platform.platforms[platform]
     Chef::Platform.platforms[platform][:default][:microsoft_remote_desktop_app]
   end
 
