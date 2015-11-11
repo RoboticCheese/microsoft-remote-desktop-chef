@@ -7,7 +7,7 @@ maintainer_email 'j@p4nt5.com'
 license          'apache2'
 description      'Installs/Configures the Microsoft Remote Desktop app'
 long_description 'Installs/Configures the Microsoft Remote Desktop app'
-version          '1.0.0'
+version          '1.0.1'
 
 depends          'mac-app-store', '~> 1.0'
 

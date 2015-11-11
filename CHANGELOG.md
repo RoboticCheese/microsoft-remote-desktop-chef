@@ -1,6 +1,9 @@
 Microsoft Remote Desktop Cookbook CHANGELOG
 ===========================================
 
+v?.?.? (????-??-??)
+-------------------
+
 v1.0.0 (2015-11-10)
 -------------------
 - Update the pinned version of `mac-app-store`
