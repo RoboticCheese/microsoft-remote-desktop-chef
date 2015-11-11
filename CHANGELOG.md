@@ -1,7 +1,7 @@
 Microsoft Remote Desktop Cookbook CHANGELOG
 ===========================================
 
-v?.?.? (????-??-??)
+v1.0.0 (2015-11-10)
 -------------------
 - Update the pinned version of `mac-app-store`
 - Update to Chef 12.5-style custom resources (breaking compatibility with Chef

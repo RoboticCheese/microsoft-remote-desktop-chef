@@ -1,6 +1,6 @@
 # Encoding: UTF-8
 
-require 'spec_helper'
+require_relative '../spec_helper'
 
 describe 'microsoft-remote-desktop::default' do
   let(:platform) { nil }
