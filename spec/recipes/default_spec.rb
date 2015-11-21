@@ -10,10 +10,6 @@ describe 'microsoft-remote-desktop::default' do
   context 'Mac OS X platform' do
     let(:platform) { { platform: 'mac_os_x', version: '10.10' } }
 
-    it 'runs the mac-app-store default recipe' do
-      expect(chef_run).to include_recipe('mac-app-store')
-    end
-
     it 'installs the Microsoft Remote Desktop app' do
       expect(chef_run).to install_microsoft_remote_desktop_app('default')
     end

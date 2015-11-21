@@ -18,8 +18,6 @@
 # limitations under the License.
 #
 
-include_recipe 'mac-app-store'
-
 microsoft_remote_desktop_app 'default' do
   action :install
 end
