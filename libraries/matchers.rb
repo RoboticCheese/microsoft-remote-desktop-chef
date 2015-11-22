@@ -19,11 +19,17 @@
 #
 
 if defined?(ChefSpec)
-  ChefSpec.define_matcher(:microsoft_remote_desktop_app)
+  %i(microsoft_remote_desktop_app microsoft_remote_desktop_app_beta).each do |m|
+    ChefSpec.define_matcher(m)
 
-  def install_microsoft_remote_desktop_app(name)
-    ChefSpec::Matchers::ResourceMatcher.new(:microsoft_remote_desktop_app,
-                                            :install,
+    define_method("install_#{m}") do |name|
+      ChefSpec::Matchers::ResourceMatcher.new(m, :install, name)
+    end
+  end
+
+  def remove_microsoft_remote_desktop_app_beta(name)
+    ChefSpec::Matchers::ResourceMatcher.new(:microsoft_remote_desktop_app_beta,
+                                            :remove,
                                             name)
   end
 end
