@@ -18,6 +18,4 @@
 # limitations under the License.
 #
 
-microsoft_remote_desktop_app 'default' do
-  action :install
-end
+microsoft_remote_desktop_app 'default'

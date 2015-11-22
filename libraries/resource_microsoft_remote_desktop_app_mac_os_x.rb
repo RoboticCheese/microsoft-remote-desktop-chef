@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 #
 # Cookbook Name:: microsoft-remote-desktop
-# Library:: resource_microsoft_remote_desktop_app
+# Library:: resource_microsoft_remote_desktop_app_mac_os_x
 #
 # Copyright 2015 Jonathan Hartman
 #
@@ -22,10 +22,11 @@ require 'chef/resource'
 
 class Chef
   class Resource
-    # A Chef resource for the Microsoft Remote Desktop app.
+    # A Chef resource for installing Microsoft Remote Desktop from the Mac App
+    # Store.
     #
     # @author Jonathan Hartman <j@p4nt5.com>
-    class MicrosoftRemoteDesktopApp < Resource
+    class MicrosoftRemoteDesktopAppMacOsX < Resource
       provides :microsoft_remote_desktop_app, platform_family: 'mac_os_x'
 
       Chef::Resource::MacAppStoreApp.allowed_actions.each do |a|

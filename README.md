@@ -15,9 +15,11 @@ A Chef cookbook to install the Microsoft Remote Desktop app.
 Requirements
 ============
 
-This cookbook offers a recipe-based and a resource-based install. Use of the
-resource requires that you open a `mac_app_store` resource prior in your Chef
-run.
+This cookbook offers a recipe-based and a resource-based install.
+
+Installation via the Mac App Store requires either a user already be logged in,
+or the proper `node['mac_app_store']['username']` and
+`node['mac_app_store']['password']` attributes be provided.
 
 As of version 1.0.0, this cookbook requires Chef 12.5 or newer.
 
@@ -52,6 +54,29 @@ Actions:
 | Action     | Description     |
 |------------|-----------------|
 | `:install` | Install the app |
+
+Attributes:
+
+| Attribute  | Default        | Description          |
+|------------|----------------|----------------------|
+| action     | `:install`     | Action(s) to perform |
+
+***microsoft_remote_desktop_app_beta***
+
+Used to perform installation of beta version of the app from HockeyApp.
+
+Syntax:
+
+    microsoft_remote_desktop_app_beta 'default' do
+        action :install
+    end
+
+Actions:
+
+| Action     | Description       |
+|------------|-------------------|
+| `:install` | Install the app   |
+| `:remove`  | Uninstall the app |
 
 Attributes:
 

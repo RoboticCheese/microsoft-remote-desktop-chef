@@ -20,3 +20,9 @@ suites:
       mac_app_store:
         username: <%= ENV['APPLE_ID_USERNAME'] %>
         password: <%= ENV['APPLE_ID_PASSWORD'] %>
+  - name: beta
+    run_list:
+      - recipe[microsoft-remote-desktop_test::beta]
+  - name: beta-uninstall
+    run_list:
+      - recipe[microsoft-remote-desktop_test::beta_uninstall]
