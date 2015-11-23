@@ -34,14 +34,48 @@ Recipes
 
 ***default***
 
-Opens the Mac App Store and performs a simple install of the app.
+Performs an attribute-driven install of the app.
+
+Attributes
+==========
+
+***default***
+
+A beta attribute can be overridden to install the beta of Microsoft Remote
+Desktop from HockeyApp instead of the normal one from the Mac App Store.
 
 Resources
 =========
 
+***microsoft_remote_desktop***
+
+A wrapper for the other resources.
+
+Syntax:
+
+    microsoft_remote_desktop 'default' do
+      beta false
+      action :install
+    end
+
+Actions:
+
+| Action     | Description       |
+|------------|-------------------|
+| `:install` | Install the app   |
+| `:remove`  | Uninstall the app |
+
+Attributes:
+
+| Attribute | Default    | Description                         |
+|-----------|------------|-------------------------------------|
+| beta      | `nil`      | Optionally install the beta version |
+| action    | `:install` | Action(s) to perform                |
+
+
 ***microsoft_remote_desktop_app***
 
-Used to perform installation of the app.
+Used to perform installation of the regular release of the app.
 
 Syntax:
 

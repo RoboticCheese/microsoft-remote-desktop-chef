@@ -22,7 +22,13 @@ suites:
         password: <%= ENV['APPLE_ID_PASSWORD'] %>
   - name: beta
     run_list:
-      - recipe[microsoft-remote-desktop_test::beta]
+      - recipe[microsoft-remote-desktop]
+    attributes:
+      microsoft_remote_desktop:
+        beta: true
   - name: beta-uninstall
     run_list:
-      - recipe[microsoft-remote-desktop_test::beta_uninstall]
+      - recipe[microsoft-remote-desktop_test::uninstall]
+    attributes:
+      microsoft_remote_desktop:
+        beta: true
