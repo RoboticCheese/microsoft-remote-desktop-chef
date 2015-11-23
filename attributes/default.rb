@@ -1,7 +1,7 @@
 # Encoding: UTF-8
 #
 # Cookbook Name:: microsoft-remote-desktop
-# Recipe:: default
+# Attributes:: default
 #
 # Copyright 2015 Jonathan Hartman
 #
@@ -18,6 +18,4 @@
 # limitations under the License.
 #
 
-microsoft_remote_desktop 'default' do
-  beta node['microsoft_remote_desktop']['beta']
-end
+default['microsoft_remote_desktop']['beta'] = nil
