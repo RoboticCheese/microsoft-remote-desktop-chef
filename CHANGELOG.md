@@ -1,7 +1,7 @@
 Microsoft Remote Desktop Cookbook CHANGELOG
 ===========================================
 
-v?.?.? (????-??-??)
+v1.1.0 (2015-11-23)
 -------------------
 - Add support for installing the beta app from HockeyApp
 
