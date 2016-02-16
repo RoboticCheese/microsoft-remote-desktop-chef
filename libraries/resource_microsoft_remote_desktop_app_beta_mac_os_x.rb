@@ -27,7 +27,7 @@ class Chef
     #
     # @author Jonathan Hartman <j@p4nt5.com>
     class MicrosoftRemoteDesktopAppBetaMacOsX < Resource
-      PATH ||= '/Applications/Microsoft Remote Desktop Beta.app'
+      PATH ||= '/Applications/Microsoft Remote Desktop Beta.app'.freeze
 
       provides :microsoft_remote_desktop_app_beta, platform_family: 'mac_os_x'
 

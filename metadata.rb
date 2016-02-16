@@ -1,6 +1,5 @@
 # Encoding: UTF-8
-#
-# rubocop:disable SingleSpaceBeforeFirstArg
+
 name             'microsoft-remote-desktop'
 maintainer       'Jonathan Hartman'
 maintainer_email 'j@p4nt5.com'
@@ -12,4 +11,3 @@ version          '1.1.1'
 depends          'mac-app-store', '~> 1.0'
 
 supports         'mac_os_x'
-# rubocop:enable SingleSpaceBeforeFirstArg

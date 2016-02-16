@@ -6,7 +6,7 @@ describe 'microsoft-remote-desktop::default' do
   let(:beta) { nil }
   let(:runner) do
     ChefSpec::SoloRunner.new do |node|
-      node.set['microsoft_remote_desktop']['beta'] = beta if beta
+      node.set['microsoft_remote_desktop']['beta'] = beta unless beta.nil?
     end
   end
   let(:converge) { runner.converge(described_recipe) }
@@ -17,7 +17,7 @@ describe 'microsoft-remote-desktop::default' do
 
     it 'installs the normal Microsoft Remote Desktop' do
       expect(chef_run).to install_microsoft_remote_desktop('default')
-        .with(beta: nil)
+        .with(beta: false)
     end
   end
 
