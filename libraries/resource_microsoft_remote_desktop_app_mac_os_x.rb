@@ -34,7 +34,6 @@ class Chef
           include_recipe 'mac-app-store' unless a == :nothing
 
           mac_app_store_app 'Microsoft Remote Desktop' do
-            bundle_id 'com.microsoft.rdc.mac'
             action a
           end
         end
