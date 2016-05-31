@@ -1,13 +1,17 @@
 # Encoding: UTF-8
 
-name             'microsoft-remote-desktop'
-maintainer       'Jonathan Hartman'
+name 'microsoft-remote-desktop'
+maintainer 'Jonathan Hartman'
 maintainer_email 'j@p4nt5.com'
-license          'apache2'
-description      'Installs/Configures the Microsoft Remote Desktop app'
+license 'apache2'
+description 'Installs/Configures the Microsoft Remote Desktop app'
 long_description 'Installs/Configures the Microsoft Remote Desktop app'
-version          '1.1.1'
+version '1.1.1'
 
-depends          'mac-app-store', '~> 1.0'
+source_url 'https://github.com/roboticcheese/microsoft-remote-desktop-chef'
+issues_url 'https://github.com/roboticcheese/microsoft-remote-desktop-chef/' \
+           'issues'
 
-supports         'mac_os_x'
+depends 'mac-app-store', '~> 2.0'
+
+supports 'mac_os_x'

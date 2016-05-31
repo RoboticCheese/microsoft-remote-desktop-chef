@@ -1,8 +1,9 @@
 Microsoft Remote Desktop Cookbook CHANGELOG
 ===========================================
 
-v?.?.? (????-??-??)
--------------------
+Unreleased
+----------
+- Update to use mac-app-store cookbook 2.0
 
 v1.1.0 (2015-11-23)
 -------------------

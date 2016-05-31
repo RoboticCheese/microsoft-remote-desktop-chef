@@ -25,7 +25,6 @@ describe 'resource_microsoft_remote_desktop_app::mac_os_x::10_10' do
 
     it 'installs via the App Store' do
       expect(chef_run).to install_mac_app_store_app('Microsoft Remote Desktop')
-        .with(bundle_id: 'com.microsoft.rdc.mac')
     end
   end
 end
